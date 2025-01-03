@@ -21,7 +21,6 @@ This project explores a customer online food delivery dataset to uncover trends,
   - Bar charts for customer concerns.
   - Boxplots for numerical distributions (e.g., family size, order values).
   - Heatmaps for correlation analysis.
-- **Customizable Analysis**: Easy to modify scripts for further exploration.
 
 ---
 
