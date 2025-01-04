@@ -185,16 +185,14 @@ elif selection == "Age Distribution":
 
 elif selection == "Order Value vs Delivery Rating":
     st.header("💰 Order Value vs Delivery Rating")
-    fig = px.scatter(
-        data, 
-        x="Order Value", 
-        y="Delivery Rating", 
-        color="Gender",
-        size="Order Value",
-        title="Order Value vs Delivery Rating",
-        template="plotly_dark"
+    fig, ax = plt.subplots(figsize=(8, 5))
+    sns.heatmap(
+        pd.crosstab(data['Delivery Rating'], data['Order Value'], normalize='index'),
+        cmap="coolwarm",
+        annot=False
     )
-    st.plotly_chart(fig)
+    ax.set_title("Heatmap of Order Value by Delivery Rating")
+    st.pyplot(fig)
 
 elif selection == "Meal Category vs Order Value":
     st.header("🍽️ Meal Category vs Order Value")
@@ -226,12 +224,13 @@ elif selection == "Health Concern Impact":
 elif selection == "Delivery Time Analysis":
     st.header("⏰ Delivery Time Analysis")
     delivery_time_dist = data['Delivery Time'].value_counts()
-    fig = px.bar_polar(
-        delivery_time_dist, 
-        r=delivery_time_dist.values,
-        theta=delivery_time_dist.index,
-        title="Delivery Time Distribution",
-        color_discrete_sequence=px.colors.sequential.Viridis
+    fig = px.line(
+        delivery_time_dist,
+        x=delivery_time_dist.index,
+        y=delivery_time_dist.values,
+        title="Delivery Time Frequency",
+        markers=True,
+        color_discrete_sequence=['#00CC96']
     )
     st.plotly_chart(fig)
 
@@ -248,14 +247,14 @@ elif selection == "Family Size vs No. of Orders":
 
 elif selection == "Influence of Rating":
     st.header("⭐ Influence of Ratings")
-    fig = px.scatter(
-        data, 
-        x="Restaurnat Rating", 
-        y="Delivery Rating", 
-        color="Gender",
-        title="Influence of Restaurant Rating on Delivery Rating",
-        size="Order Value",
-        color_discrete_sequence=px.colors.qualitative.Set1
+    ratings_data = data.groupby('Restaurnat Rating')[['No. Of Orders Placed', 'Delivery Rating']].mean().reset_index()
+    fig = px.line(
+        ratings_data,
+        x="Restaurnat Rating",
+        y=["No. Of Orders Placed", "Delivery Rating"],
+        title="Influence of Ratings on Orders and Delivery",
+        labels={"value": "Average Value", "variable": "Metric"},
+        color_discrete_sequence=px.colors.qualitative.Pastel
     )
     st.plotly_chart(fig)
 
@@ -273,13 +272,13 @@ elif selection == "Occupation Analysis":
 
 elif selection == "Delivery Time vs Rating":
     st.header("🚚 Delivery Time vs Rating")
-    fig = px.box(
-        data, 
-        x="Delivery Time", 
+    fig = px.strip(
+        data,
+        x="Delivery Time",
         y="Delivery Rating",
         color="Gender",
         title="Delivery Time vs Delivery Rating",
-        color_discrete_sequence=px.colors.sequential.Emrld
+        color_discrete_sequence=px.colors.qualitative.Set2
     )
     st.plotly_chart(fig)
 
