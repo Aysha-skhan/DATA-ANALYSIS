@@ -33,17 +33,12 @@ An interactive **Streamlit** dashboard that visualizes customer data to explore 
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the app**:
+3. **Run the app**:
    ```bash
    streamlit run app.py
    ```
 
-5. **View the app** in your browser at the provided local URL.
+4. **View the app** in your browser at the provided local URL.
 
 ## Requirements
 
