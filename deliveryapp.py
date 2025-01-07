@@ -11,7 +11,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
+# Display Logo on All Pages
+st.sidebar.image("pic1.jpeg", width=200)  # Adjust the path as needed
 # Load Data with Caching
 @st.cache_data
 def load_data():
@@ -298,6 +299,6 @@ elif selection == "Marital Status and Preferences":
 st.markdown(
     """
     ---
-    🚀 **Customer Preferences Dashboard** | Built with ❤️ using Streamlit
+    🚀 **Customer Preferences Dashboard** | Made By Ayesha Khan
     """
 )
