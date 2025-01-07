@@ -1,60 +1,58 @@
-# Customer Online Food Delivery Analysis 🍴📊
 
-*Unlocking insights into customer preferences, delivery ratings, and service performance.*
+# Customer Preferences Dashboard 🍔
 
----
-
-## Overview
-This project explores a customer online food delivery dataset to uncover trends, customer concerns, and factors influencing satisfaction and retention. By analyzing customer ratings, preferences, and behaviors, the goal is to provide actionable insights for improving service quality in the food delivery industry.
-
-### Key Highlights:
-- Identifying **key concerns** like late delivery, poor hygiene, and health-conscious choices.
-- Exploring **delivery ratings** and their correlation with order values.
-- Visualizing trends in meal preferences and delivery times.
-
----
+An interactive **Streamlit** dashboard that visualizes customer data to explore behavior, preferences, and delivery feedback. Key features include insights into customer demographics, meal preferences, delivery concerns, and more.
 
 ## Features
-- **Data Cleaning & Preprocessing**: Handling missing data, correcting data types, and ensuring consistency.
-- **Exploratory Data Analysis (EDA)**: Statistical summaries, visualizations, and trend analyses.
-- **Key Insights Visualized**:
-  - Bar charts for customer concerns.
-  - Boxplots for numerical distributions (e.g., family size, order values).
-  - Heatmaps for correlation analysis.
 
----
+- **Overview**: Quick dataset summary and key metrics (Total Customers, Orders, Avg Order Value).
+- **Customer Demographics**: Gender and marital status distribution.
+- **Meal Preferences**: Popular meal categories and ordering mediums.
+- **Delivery Concerns**: Heatmaps of delivery issues.
+- **Ratings & Reviews**: Delivery and restaurant ratings distribution.
+- **Age Distribution**: Age vs. gender analysis.
+- **Order Value vs Rating**: Relationship between order value and delivery ratings.
+- **Meal Category Impact**: Meal category vs. order value analysis.
+- **Health Concerns**: Impact of health concerns on order values.
+- **Delivery Time Analysis**: Delivery time distribution.
+- **Family Size**: Family size vs. number of orders.
+- **Occupation Analysis**: Occupation vs. preferences.
+- **Delivery Time vs Rating**: Delivery time vs. rating visualization.
+
+## Quick Start
+
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/yourusername/customer-preferences-dashboard.git
+   cd customer-preferences-dashboard
+   ```
+
+2. **Create and activate virtual environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the app**:
+   ```bash
+   streamlit run app.py
+   ```
+
+5. **View the app** in your browser at the provided local URL.
+
+## Requirements
+
+- **streamlit**
+- **pandas**
+- **plotly**
+- **seaborn**
+- **matplotlib**
 
 ## Dataset
-The dataset includes the following features:
 
-### Demographics:
-- Age, Gender, Marital Status, Occupation, Educational Qualifications, Family Size.
-
-### Behavioral Data:
-- Frequently used Medium, Frequently ordered Meal category, Preferences.
-
-### Ratings:
-- Restaurant Rating, Delivery Rating.
-
-### Order Details:
-- Number of orders placed, Delivery Time, Order Value.
-
-### Customer Concerns:
-- Health Concern, Late Delivery, Poor Hygiene, Bad Past Experience.
-
----
-
-## Visualizations
-### Key Plots:
-1. **Boxplots**: Analyze family size, delivery times, and order values.
-2. **Bar Charts**: Visualize the frequency of customer concerns.
-3. **Correlation Heatmaps**: Identify relationships between numerical features.
-
----
-
-## Installation & Usage
-### Steps to Run:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/customer-food-delivery-analysis.git
-   cd customer-food-delivery-analysis
+Ensure your `customer_data.csv` follows the required format with columns like `Gender`, `Marital Status`, `Order Value`, `Delivery Rating`, etc.
