@@ -12,7 +12,6 @@ st.set_page_config(
 )
 # Display Logo on All Pages
 st.sidebar.image("pic1.jpeg", width=200)  # Adjust the path as needed
-# Load Data with Caching
 @st.cache_data
 def load_data():
     data = pd.read_csv("customer_data.csv")
