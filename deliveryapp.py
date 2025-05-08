@@ -4,7 +4,6 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Streamlit Page Configuration
 st.set_page_config(
     page_title="Customer Preferences Dashboard",
     page_icon="🍔",
