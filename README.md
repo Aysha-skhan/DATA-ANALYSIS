@@ -16,7 +16,6 @@ An interactive **Streamlit** dashboard that visualizes customer data to explore 
 - **Health Concerns**: Impact of health concerns on order values.
 - **Delivery Time Analysis**: Delivery time distribution.
 - **Family Size**: Family size vs. number of orders.
-- **Occupation Analysis**: Occupation vs. preferences.
 - **Delivery Time vs Rating**: Delivery time vs. rating visualization.
 
 ## Quick Start
