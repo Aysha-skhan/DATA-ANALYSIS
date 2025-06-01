@@ -45,6 +45,3 @@ An interactive **Streamlit** dashboard that visualizes customer data to explore 
 - **pandas**
 - **plotly**
 - **seaborn**
-
-## Dataset
-
