@@ -48,4 +48,3 @@ An interactive **Streamlit** dashboard that visualizes customer data to explore 
 
 ## Dataset
 
-Ensure your `customer_data.csv` follows the required format with columns like `Gender`, `Marital Status`, `Order Value`, `Delivery Rating`, etc.
