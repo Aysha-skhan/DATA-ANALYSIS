@@ -18,7 +18,6 @@ An interactive **Streamlit** dashboard that visualizes customer data to explore 
 - **Family Size**: Family size vs. number of orders.
 - **Delivery Time vs Rating**: Delivery time vs. rating visualization.
 
-## Quick Start
 
 1. **Clone the repo**:
    ```bash
